@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/tiktok.css">
+    <link rel="icon" href="images/logo.png">
+    <title>Tiktok Sign up</title>
+</head>
+
+<body>
+    <!-- container -->
+    <div class="container">
+        <form id="form1">
+            <h3>Sign up for Tiktok</h3>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="text" placeholder="Phone-Number" required>
+            <div class="btn-box">
+               <button id="login"><a href="../index.html">Login</a></button> 
+                <button type="button" id="next1">Next</button>
+            </div>
+        </form>
+        <form id="form2">
+            <h3>Personal Information</h3>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="email" placeholder="Age" required>
+            <div class="btn-box">
+                <button type="button" id="back1">Back</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+        </form>
+        <form id="form3">
+            <h3>Categories for Tiktok</h3>
+            <input type="text" placeholder="Funny videos">
+            <input type="text" placeholder="Educational">
+            <input type="text" placeholder="Entertainment">
+            <div class="btn-box">
+                <button type="button" id="back2">Back</button>
+                <button onclick="myFunction()" id="submit">Submit</button>
+            </div>
+        </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col-1"><small>Sign up</small></div>
+            <div class="step-col-1"><small>Personal Info</small></div>
+            <div class="step-col-1"><small>Categories</small></div>
+        </div>
+        <script>
+            var form1 = document.getElementById('form1')
+            var form2 = document.getElementById('form2')
+            var form3 = document.getElementById('form3')
+
+            var next1 = document.getElementById('next1')
+            var next2 = document.getElementById('next2')
+
+            var back1 = document.getElementById('back1')
+            var back2 = document.getElementById('back2')
+
+            var progress = document.getElementById('progress')
+
+            next1.onclick = function () {
+                form1.style.left = "-450px"
+                form2.style.left = "40px"
+                progress.style.width = "240px"
+            }
+            back1.onclick = function () {
+                form1.style.left = "40px"
+                form2.style.left = "450px"
+                progress.style.width = "120px"
+            }
+            next2.onclick = function () {
+                form2.style.left = "-450px"
+                form3.style.left = "40px"
+                progress.style.width = "360px"
+            }
+            back2.onclick = function () {
+                form2.style.left = "40px"
+                form3.style.left = "450px"
+                progress.style.width = "240px"
+            }
+            // submit alert
+            function myFunction() {
+                alert("Your form is successfully SUBMITTED!!!");
+            }
+        </script>
+</body>
+
+</html>
